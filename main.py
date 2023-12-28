@@ -19,7 +19,6 @@ def translate_file_for_all_languages(source_lang, file_name):
                 continue
 
             target_dir_path = f"lang/{target_lang}"
-            print(target_dir_path)
 
             translated_data = {}
             for key, value in data.items():
