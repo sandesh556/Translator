@@ -42,5 +42,9 @@ def format_as_php_array(data):
     return formatted_array
 
 
-# Usage example
-translate_file_for_all_languages('en', 'lang')  # Translate 'common.py' from English to all languages
+# User Input
+source_lang = input("Enter the language code that you finish to translate from: ")
+file_name = input("Enter file name (just the name): ")
+
+# Usage example with user input
+translate_file_for_all_languages(source_lang, file_name)
