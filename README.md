@@ -33,6 +33,8 @@ This script facilitates the translation of language files from one language to a
 
 5. **Running the Script**:
     - Execute `main.py` to trigger the translation process.
+    - it will ask you from which language are you translating, ex: English then you need to use the code en.
+    - And then the file name which will be "lang"
 
 ## Usage Instructions
 
