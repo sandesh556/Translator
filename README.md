@@ -51,3 +51,5 @@ This script facilitates the translation of language files from one language to a
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the script, feel free to submit a pull request or raise an issue.
+
+Also if you want to add more languages just create a folder with the lang directory with the short form that google has approved and it will translate to that language also.
