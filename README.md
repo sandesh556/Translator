@@ -18,6 +18,7 @@ This script facilitates the translation of language files from one language to a
 3. **File Structure**:
     - **`lang` Folder**:
         - Locate the `lang` directory containing language-specific files.
+        - Locate the `en`   directory which will have lang.pu
         - Modify `lang.py` to include your language data in a JSON-like format.
 
 4. **Insert Language Data**:
