@@ -1,0 +1,42 @@
+name: Auto Merge Approved PRs
+
+on:
+  pull_request:
+    types: [review_requested, review_request_removed, submitted, closed]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false && github.event.pull_request.merged == false
+
+    steps:
+      - name: Check PR approval status
+        uses: actions/github-script@v6
+        id: check-approval
+        with:
+          script: |
+            const { data: reviews } = await github.rest.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            const approvedReviews = reviews.filter(review => review.state === 'APPROVED');
+            const requiredApprovals = 1; // Number of required approvals before merging
+
+            if (approvedReviews.length >= requiredApprovals) {
+              return 'approved';
+            } else {
+              return 'not_approved';
+            }
+          
+      - name: Merge PR if approved
+        if: steps.check-approval.outputs.result == 'approved'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              merge_method: 'rebase'
+            });
