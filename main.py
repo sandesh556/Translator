@@ -1,7 +1,7 @@
 from googletrans import Translator
 import os
 
-
+//sdsdsdsdsdsds
 def translate_file_for_all_languages(source_lang, file_name):
     translator = Translator()
 
