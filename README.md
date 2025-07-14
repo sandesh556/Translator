@@ -7,7 +7,7 @@
 This script facilitates the translation of language files from one language to another using the Google Translate API. It generates translated versions of language files, which can be utilized in projects requiring multilingual support.
 
 ## Getting Started
-
+sdf
 1. **Clone Repository**: Clone this repository to your local machine.
 
 2. **Install Dependencies**: Ensure you have the necessary dependencies by running:
