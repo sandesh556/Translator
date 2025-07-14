@@ -13,7 +13,7 @@ This script facilitates the translation of language files from one language to a
 2. **Install Dependencies**: Ensure you have the necessary dependencies by running:
     ```bash
     pip install googletrans==4.0.0-rc1
-    ```
+    ```asd
 
 3. **File Structure**:
     - **`lang` Folder**:
