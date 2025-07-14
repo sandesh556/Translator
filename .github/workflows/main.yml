@@ -17,8 +17,6 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
-
-            // Check if label already exists
             const { data: labels } = await github.rest.issues.listLabelsOnIssue({
               owner: context.repo.owner,
               repo: context.repo.repo,
