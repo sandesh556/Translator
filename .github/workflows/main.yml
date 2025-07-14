@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   label-code-correction:
-    if: github.event.review.state == 'commented' && github.event.review.user.login == 'github-pull-request-reviewer[bot]'
+    if: github.event.review.state == 'commented'
     runs-on: ubuntu-latest
     steps:
       - name: Add "code correction" label
